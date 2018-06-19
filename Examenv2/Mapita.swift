@@ -33,13 +33,12 @@ class Mapita: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    func locationManager(_manager: CLLocationManager, didUpdateLocations locations:[CLLocation]){
+    func locationManager(_manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         
         let location = locations.first!
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
         MiMapita.setRegion(coordinateRegion, animated: true)
         locationManager.stopUpdatingLocation()
-        
     }
 
     override func didReceiveMemoryWarning() {
