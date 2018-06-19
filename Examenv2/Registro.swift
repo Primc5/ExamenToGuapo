@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Registro: UIViewController {
+class Registro: UIViewController, DataHolderDelegate {
 
     @IBOutlet var User: UITextField?
     @IBOutlet var Email: UITextField?
@@ -28,7 +28,17 @@ class Registro: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func clickRegister(){
+        
+        
+        DataHolder.sharedInstance.email = (Email?.text)!
+        DataHolder.sharedInstance.user = (User?.text)!
+        DataHolder.sharedInstance.pass = (Password?.text)!
+        DataHolder.sharedInstance.repass = (RePassword?.text)!
+        
+        
+        DataHolder.sharedInstance.Registro(delegate: self, sEmail: (Email?.text)!, sPass: (Password?.text)!)
+    }
     /*
     // MARK: - Navigation
 
@@ -38,5 +48,9 @@ class Registro: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func dataHolderRegister(blfin: Bool) {
+        if blfin==true{
+            self.performSegue(withIdentifier: "registrado", sender: self)
+        }
+    }
 }

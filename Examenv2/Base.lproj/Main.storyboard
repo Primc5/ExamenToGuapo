@@ -106,6 +106,9 @@
                                 <rect key="frame" x="261" y="549" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Aceptar"/>
+                                <connections>
+                                    <action selector="clickRegister" destination="MwL-31-YRo" eventType="touchUpInside" id="nSv-6Q-AWU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyq-ct-9Xg">
                                 <rect key="frame" x="49" y="549" width="30" height="30"/>
@@ -133,11 +136,15 @@
                         <outlet property="RePassword" destination="DFE-sv-R2v" id="cFJ-vb-CWy"/>
                         <outlet property="Salir" destination="Lyq-ct-9Xg" id="M6O-sa-lco"/>
                         <outlet property="User" destination="Lts-Cf-VFf" id="kXS-fu-ckm"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="registrado" id="QQn-Vz-1iZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muz-9p-oUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="814"/>
+            <point key="canvasLocation" x="-936" y="252"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QQn-Vz-1iZ"/>
+    </inferredMetricsTieBreakers>
 </document>
