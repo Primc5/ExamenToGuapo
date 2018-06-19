@@ -10,15 +10,15 @@ import UIKit
 import MapKit
 
 class Mapita: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
-    @IBOutlet var MiMapita:MKMapView?
+    @IBOutlet weak var MiMapita:MKMapView!
     
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        MiMapita?.delegate = self
-        MiMapita?.showsPointsOfInterest = true
-        MiMapita?.showsUserLocation = true
+        MiMapita.delegate = self
+        MiMapita.showsPointsOfInterest = true
+        MiMapita.showsUserLocation = true
         
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
@@ -37,7 +37,7 @@ class Mapita: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
         
         let location = locations.first!
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
-        MiMapita?.setRegion(coordinateRegion, animated: true)
+        MiMapita.setRegion(coordinateRegion, animated: true)
         locationManager.stopUpdatingLocation()
         
     }
