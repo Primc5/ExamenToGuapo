@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
@@ -21,6 +22,8 @@ class DataHolder: NSObject {
     var email:String = ""
     var pass:String = ""
     var repass:String = ""
+    
+    var arColumnas:[Tablak] = []
     
     func initFirebase(){
         FirebaseApp.configure()
@@ -37,7 +40,8 @@ class DataHolder: NSObject {
             }
             else if self.email != "" && self.user != ""{
                 print ("Te registraste")
-                
+                print(self.email)
+                print(self.user)
                 DataHolder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!).setData(["email"
                     :self.email, "nombre":self.user])
                 delegate.dataHolderRegister!(blfin: true)
@@ -51,7 +55,8 @@ class DataHolder: NSObject {
     
     var sID:String = ""
     func Login(delegate:DataHolderDelegate, sEmail:String, sContrasena:String) {
-        print("hola")
+        print("Hola " + sEmail)
+        
         Auth.auth().signIn(withEmail: sEmail, password: sContrasena) {(email, error) in
             if sEmail != ""{
                 self.sID = (email?.uid)!
@@ -71,15 +76,39 @@ class DataHolder: NSObject {
                 }
             }
             else{
-                print("Error")
+                print("Fallo al logearse")
                 delegate.dataHolderLogin!(blfin: false)
             }
         }
     }
     
+    var HMIMG :[String: UIImage]?=[:]
+    func bajarImagenes(clave:String, delegate:DataHolderDelegate){
+        if self.HMIMG![clave] == nil{
+            let gsReference = self.fireStorage?.reference(forURL: clave)
+            gsReference?.getData(maxSize: 1 * 1024 * 1024, completion: { (data, error) in
+                if error != nil {
+                    print(error!)
+                }
+                else{
+                    let imgDescargada = UIImage(data: data!)
+                    self.HMIMG?[clave] = imgDescargada
+                    delegate.imagen!(imagen: imgDescargada!)
+                    
+                }
+            }
+            )
+            
+        }
+        else{
+            delegate.imagen!(imagen:self.HMIMG![clave]!)
+        }
+        print("llego")
+    }
     
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)
     @objc optional func dataHolderLogin(blfin:Bool)
+    @objc optional func imagen(imagen:UIImage)
 }

@@ -27,8 +27,10 @@ class ViewController: UIViewController, DataHolderDelegate {
     }
 
     func dataHolderLogin(blfin: Bool) {
+        print("wea")
         if blfin==true{
-           self.performSegue(withIdentifier: "logueado", sender: self)
+            print("wea2")
+            self.performSegue(withIdentifier: "transitionLogin", sender: self)
         }
     }
     

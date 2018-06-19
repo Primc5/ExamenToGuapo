@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class Registro: UIViewController, DataHolderDelegate {
 
@@ -19,7 +20,10 @@ class Registro: UIViewController, DataHolderDelegate {
     @IBOutlet var Aceptar: UIButton?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Email?.text = DataHolder.sharedInstance.email
+        User?.text = DataHolder.sharedInstance.user
+        Password?.text = DataHolder.sharedInstance.pass
+        RePassword?.text = DataHolder.sharedInstance.repass
         // Do any additional setup after loading the view.
     }
 

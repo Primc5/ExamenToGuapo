@@ -10,11 +10,16 @@ import UIKit
 
 class TablaControlador: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return DataHolder.sharedInstance.arColumnas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell:CelulaTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell")as! CelulaTableViewCell
+        
+        cell.lblNombre?.text = DataHolder.sharedInstance.arColumnas[indexPath.row].sNombre
+        cell.descargarImagenes(url: DataHolder.sharedInstance.arColumnas[indexPath.row].sFoto!)
+        
+        return cell
     }
     
     @IBOutlet var tbMiTabla:UITableView?
