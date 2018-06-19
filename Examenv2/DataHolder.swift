@@ -23,6 +23,7 @@ class DataHolder: NSObject {
     var pass:String = ""
     var repass:String = ""
     
+    var HMIMG :[String: UIImage]?=[:]
     var arColumnas:[Capuchas] = []
     
     
@@ -83,7 +84,7 @@ class DataHolder: NSObject {
         }
     }
     
-    var HMIMG :[String: UIImage]?=[:]
+
     func bajarImagenes(clave:String, delegate:DataHolderDelegate){
         if self.HMIMG![clave] == nil{
             let gsReference = self.fireStorage?.reference(forURL: clave)
