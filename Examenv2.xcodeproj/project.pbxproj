@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6F2DABD820D9093A003A77BF /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABD720D9093A003A77BF /* Perfil.swift */; };
+		6F2DABDA20D90EF2003A77BF /* Tablak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABD920D90EF2003A77BF /* Tablak.swift */; };
+		6F2DABDC20D90F34003A77BF /* TablaControlador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABDB20D90F34003A77BF /* TablaControlador.swift */; };
 		6FAFAED720D9053B001A4621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFAED620D9053B001A4621 /* AppDelegate.swift */; };
 		6FAFAED920D9053B001A4621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFAED820D9053B001A4621 /* ViewController.swift */; };
 		6FAFAEDC20D9053B001A4621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFAEDA20D9053B001A4621 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		6F2DABD720D9093A003A77BF /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
+		6F2DABD920D90EF2003A77BF /* Tablak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tablak.swift; sourceTree = "<group>"; };
+		6F2DABDB20D90F34003A77BF /* TablaControlador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaControlador.swift; sourceTree = "<group>"; };
 		6FAFAED320D9053B001A4621 /* Examenv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examenv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FAFAED620D9053B001A4621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FAFAED820D9053B001A4621 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				6FAFAEED20D90629001A4621 /* Registro.swift */,
 				6FAFAEEF20D906FF001A4621 /* DataHolder.swift */,
 				6F2DABD720D9093A003A77BF /* Perfil.swift */,
+				6F2DABD920D90EF2003A77BF /* Tablak.swift */,
+				6F2DABDB20D90F34003A77BF /* TablaControlador.swift */,
 			);
 			path = Examenv2;
 			sourceTree = "<group>";
@@ -254,6 +260,8 @@
 				6FAFAEF020D906FF001A4621 /* DataHolder.swift in Sources */,
 				6FAFAED920D9053B001A4621 /* ViewController.swift in Sources */,
 				6F2DABD820D9093A003A77BF /* Perfil.swift in Sources */,
+				6F2DABDC20D90F34003A77BF /* TablaControlador.swift in Sources */,
+				6F2DABDA20D90EF2003A77BF /* Tablak.swift in Sources */,
 				6FAFAEDF20D9053B001A4621 /* Examenv2.xcdatamodeld in Sources */,
 				6FAFAED720D9053B001A4621 /* AppDelegate.swift in Sources */,
 			);
@@ -402,7 +410,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Examenv2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Team-Benri.Examenv2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -417,7 +428,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Examenv2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Team-Benri.Examenv2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

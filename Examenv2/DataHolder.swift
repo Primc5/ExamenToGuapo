@@ -51,7 +51,7 @@ class DataHolder: NSObject {
     
     var sID:String = ""
     func Login(delegate:DataHolderDelegate, sEmail:String, sContrasena:String) {
-        
+        print("hola")
         Auth.auth().signIn(withEmail: sEmail, password: sContrasena) {(email, error) in
             if sEmail != ""{
                 self.sID = (email?.uid)!
@@ -81,5 +81,5 @@ class DataHolder: NSObject {
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)
-        @objc optional func dataHolderLogin(blfin:Bool)
+    @objc optional func dataHolderLogin(blfin:Bool)
 }
