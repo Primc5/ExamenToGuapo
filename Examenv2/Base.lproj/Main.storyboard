@@ -41,9 +41,12 @@
                                 <rect key="frame" x="55" y="560" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="registro"/>
+                                <connections>
+                                    <segue destination="MwL-31-YRo" kind="show" id="LK7-71-Hol"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logueate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yL-KW-vml">
-                                <rect key="frame" x="166" y="47" width="72" height="21"/>
+                                <rect key="frame" x="151" y="45" width="72" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -53,14 +56,20 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Aceptar" destination="QKw-NO-4ji" id="xbq-vb-zYT"/>
+                        <outlet property="Email" destination="TdL-Oe-nxp" id="evs-EQ-KuF"/>
+                        <outlet property="Password" destination="2fL-c5-p37" id="Vby-KR-hlK"/>
+                        <outlet property="Registro" destination="IGa-Y3-DMY" id="Hup-YE-rXi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Registro-->
         <scene sceneID="WD1-h9-Y4h">
             <objects>
-                <viewController id="MwL-31-YRo" sceneMemberID="viewController">
+                <viewController id="MwL-31-YRo" customClass="Registro" customModule="Examenv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gkU-Yz-zri">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,6 +111,9 @@
                                 <rect key="frame" x="49" y="549" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Salir"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LTH-TQ-VVJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pP-f1-NmA">
                                 <rect key="frame" x="139" y="31" width="78" height="21"/>
@@ -114,6 +126,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="blQ-TJ-o0n"/>
                     </view>
+                    <connections>
+                        <outlet property="Aceptar" destination="KrJ-PB-Z2L" id="Bte-hT-KXV"/>
+                        <outlet property="Email" destination="f39-sq-zt7" id="PAH-l3-zV8"/>
+                        <outlet property="Password" destination="rbI-hw-739" id="0Ex-SS-x22"/>
+                        <outlet property="RePassword" destination="DFE-sv-R2v" id="cFJ-vb-CWy"/>
+                        <outlet property="Salir" destination="Lyq-ct-9Xg" id="M6O-sa-lco"/>
+                        <outlet property="User" destination="Lts-Cf-VFf" id="kXS-fu-ckm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muz-9p-oUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
