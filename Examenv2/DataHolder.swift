@@ -23,7 +23,7 @@ class DataHolder: NSObject {
     var pass:String = ""
     var repass:String = ""
     
-    var arColumnas:[Tablak] = []
+    var arColumnas:[Capuchas] = []
     
     
     func initFirebase(){
@@ -107,9 +107,31 @@ class DataHolder: NSObject {
         print("llego")
     }
     
+    func descargarCapuchas(delegate:DataHolderDelegate){
+        
+        DataHolder.sharedInstance.fireStoreDB?.collection("Capuchas").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                delegate.DHDDescargaCapucha!(blnFin: false)
+            } else {
+                self.arColumnas=[]
+                for document in querySnapshot!.documents {
+                    let capucha:Capuchas = Capuchas()
+                    capucha.sID=document.documentID
+                    capucha.setMap(valores: document.data())
+                    self.arColumnas.append(capucha)
+                    print("\(document.documentID) => \(document.data())")
+                }
+                print("----->>>> ",self.arColumnas.count)
+                delegate.DHDDescargaCapucha!(blnFin: true)
+            }
+        }
+    }
+    
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)
     @objc optional func dataHolderLogin(blfin:Bool)
     @objc optional func imagen(imagen:UIImage)
+    @objc optional func DHDDescargaCapucha(blnFin:Bool)
 }

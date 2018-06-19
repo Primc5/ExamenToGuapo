@@ -29,6 +29,7 @@ class CelulaTableViewCell: UITableViewCell, DataHolderDelegate {
     
     func descargarImagenes(url:String){
         self.imgCelda1?.image = nil
+        print("delta")
         DataHolder.sharedInstance.bajarImagenes(clave: url, delegate: self)
         
     }

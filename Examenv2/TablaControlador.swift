@@ -8,7 +8,29 @@
 
 import UIKit
 
-class TablaControlador: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TablaControlador: UIViewController, UITableViewDelegate, UITableViewDataSource, DataHolderDelegate {
+
+    
+    @IBOutlet var tbMiTabla:UITableView?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        DataHolder.sharedInstance.descargarCapuchas(delegate: self)
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func DHDDescargaCapucha(blnFin: Bool){
+        if blnFin == true{
+            self.refreshUI()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataHolder.sharedInstance.arColumnas.count
     }
@@ -20,30 +42,15 @@ class TablaControlador: UIViewController, UITableViewDelegate, UITableViewDataSo
         cell.descargarImagenes(url: DataHolder.sharedInstance.arColumnas[indexPath.row].sFoto!)
         
         return cell
+        
+        
     }
     
-    @IBOutlet var tbMiTabla:UITableView?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    func refreshUI() {
+        DispatchQueue.main.async(execute: {
+            self.tbMiTabla?.reloadData()
+        })
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

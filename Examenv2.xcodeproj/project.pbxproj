@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6F2DABD820D9093A003A77BF /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABD720D9093A003A77BF /* Perfil.swift */; };
-		6F2DABDA20D90EF2003A77BF /* Tablak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABD920D90EF2003A77BF /* Tablak.swift */; };
 		6F2DABDE20D90F80003A77BF /* TablaControlador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABDD20D90F80003A77BF /* TablaControlador.swift */; };
 		6F2DABE020D91075003A77BF /* CelulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABDF20D91075003A77BF /* CelulaTableViewCell.swift */; };
 		6F2DABE620D91AF6003A77BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F2DABE520D91AF6003A77BF /* GoogleService-Info.plist */; };
+		6F2DABEA20D9232E003A77BF /* Capuchas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABE920D9232E003A77BF /* Capuchas.swift */; };
 		6FAFAED720D9053B001A4621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFAED620D9053B001A4621 /* AppDelegate.swift */; };
 		6FAFAED920D9053B001A4621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFAED820D9053B001A4621 /* ViewController.swift */; };
 		6FAFAEDC20D9053B001A4621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFAEDA20D9053B001A4621 /* Main.storyboard */; };
@@ -25,10 +25,10 @@
 
 /* Begin PBXFileReference section */
 		6F2DABD720D9093A003A77BF /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
-		6F2DABD920D90EF2003A77BF /* Tablak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tablak.swift; sourceTree = "<group>"; };
 		6F2DABDD20D90F80003A77BF /* TablaControlador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaControlador.swift; sourceTree = "<group>"; };
 		6F2DABDF20D91075003A77BF /* CelulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaTableViewCell.swift; sourceTree = "<group>"; };
 		6F2DABE520D91AF6003A77BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6F2DABE920D9232E003A77BF /* Capuchas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capuchas.swift; sourceTree = "<group>"; };
 		6FAFAED320D9053B001A4621 /* Examenv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examenv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FAFAED620D9053B001A4621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FAFAED820D9053B001A4621 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,9 +97,9 @@
 				6FAFAEED20D90629001A4621 /* Registro.swift */,
 				6FAFAEEF20D906FF001A4621 /* DataHolder.swift */,
 				6F2DABD720D9093A003A77BF /* Perfil.swift */,
-				6F2DABD920D90EF2003A77BF /* Tablak.swift */,
 				6F2DABDD20D90F80003A77BF /* TablaControlador.swift */,
 				6F2DABDF20D91075003A77BF /* CelulaTableViewCell.swift */,
+				6F2DABE920D9232E003A77BF /* Capuchas.swift */,
 			);
 			path = Examenv2;
 			sourceTree = "<group>";
@@ -260,11 +260,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FAFAEEE20D90629001A4621 /* Registro.swift in Sources */,
+				6F2DABEA20D9232E003A77BF /* Capuchas.swift in Sources */,
 				6FAFAEF020D906FF001A4621 /* DataHolder.swift in Sources */,
 				6FAFAED920D9053B001A4621 /* ViewController.swift in Sources */,
 				6F2DABD820D9093A003A77BF /* Perfil.swift in Sources */,
 				6F2DABDE20D90F80003A77BF /* TablaControlador.swift in Sources */,
-				6F2DABDA20D90EF2003A77BF /* Tablak.swift in Sources */,
 				6FAFAEDF20D9053B001A4621 /* Examenv2.xcdatamodeld in Sources */,
 				6F2DABE020D91075003A77BF /* CelulaTableViewCell.swift in Sources */,
 				6FAFAED720D9053B001A4621 /* AppDelegate.swift in Sources */,

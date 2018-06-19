@@ -1,5 +1,5 @@
 //
-//  Tablak.swift
+//  Capuchas.swift
 //  Examenv2
 //
 //  Created by PABLO CRUZ MENDEZ on 19/6/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Tablak: NSObject {
+class Capuchas: NSObject {
     let IDnombre = "nombre"
     let IDfoto = "foto"
     
