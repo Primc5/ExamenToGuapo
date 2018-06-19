@@ -167,7 +167,7 @@
         <!--Item 1-->
         <scene sceneID="vE8-Jn-FJC">
             <objects>
-                <viewController id="b8i-Oa-0zi" sceneMemberID="viewController">
+                <viewController id="b8i-Oa-0zi" customClass="TablaControlador" customModule="Examenv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bjZ-Sc-XKQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,6 +205,9 @@
                         <viewLayoutGuide key="safeArea" id="8qd-PW-Twg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="lXJ-7y-tx4"/>
+                    <connections>
+                        <outlet property="tbMiTabla" destination="FVH-OU-4QF" id="utL-AK-wGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2it-1t-woo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
