@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DataHolderDelegate {
 
     @IBOutlet var Email: UITextField?
     @IBOutlet var Password: UITextField?
@@ -26,6 +26,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func dataHolderLogin(blfin: Bool) {
+        if blfin==true{
+           self.performSegue(withIdentifier: "logueado", sender: self)
+        }
+    }
+    
+    @IBAction func cliclogevent(){
+        DataHolder.sharedInstance.Login(delegate: self, sEmail: (Email?.text)!, sContrasena: (Password?.text)!)
+    }
+    
 }
 

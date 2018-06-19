@@ -49,9 +49,37 @@ class DataHolder: NSObject {
         }
     }
     
+    var sID:String = ""
+    func Login(delegate:DataHolderDelegate, sEmail:String, sContrasena:String) {
+        
+        Auth.auth().signIn(withEmail: sEmail, password: sContrasena) {(email, error) in
+            if sEmail != ""{
+                self.sID = (email?.uid)!
+                let ruta = DataHolder.sharedInstance.fireStoreDB?.collection("Perfiles").document((email?.uid)!)
+                
+                ruta?.getDocument { (document, error) in
+                    if document != nil{
+                        
+                        DataHolder.sharedInstance.miPerfil.setMap(valores: (document?.data())!)
+                        
+                        delegate.dataHolderLogin!(blfin: true)
+                        
+                    }
+                    else{
+                        print(error!)
+                    }
+                }
+            }
+            else{
+                print("Error")
+                delegate.dataHolderLogin!(blfin: false)
+            }
+        }
+    }
+    
     
 }
 @objc protocol DataHolderDelegate{
     @objc optional func dataHolderRegister(blfin:Bool)
-    
+        @objc optional func dataHolderLogin(blfin:Bool)
 }
