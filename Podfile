@@ -7,5 +7,8 @@ target 'Examenv2' do
 
   # Pods for Examenv2
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
 
 end
