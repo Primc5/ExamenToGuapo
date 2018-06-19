@@ -30,7 +30,7 @@ class ViewController: UIViewController, DataHolderDelegate {
         print("wea")
         if blfin==true{
             print("wea2")
-            self.performSegue(withIdentifier: "transitionLogin", sender: self)
+            self.performSegue(withIdentifier: "logueado", sender: self)
         }
     }
     

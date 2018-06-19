@@ -25,6 +25,7 @@ class DataHolder: NSObject {
     
     var arColumnas:[Tablak] = []
     
+    
     func initFirebase(){
         FirebaseApp.configure()
         fireStoreDB = Firestore.firestore()

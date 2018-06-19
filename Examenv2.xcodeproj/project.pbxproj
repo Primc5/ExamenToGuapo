@@ -11,6 +11,7 @@
 		6F2DABDA20D90EF2003A77BF /* Tablak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABD920D90EF2003A77BF /* Tablak.swift */; };
 		6F2DABDE20D90F80003A77BF /* TablaControlador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABDD20D90F80003A77BF /* TablaControlador.swift */; };
 		6F2DABE020D91075003A77BF /* CelulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2DABDF20D91075003A77BF /* CelulaTableViewCell.swift */; };
+		6F2DABE620D91AF6003A77BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F2DABE520D91AF6003A77BF /* GoogleService-Info.plist */; };
 		6FAFAED720D9053B001A4621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFAED620D9053B001A4621 /* AppDelegate.swift */; };
 		6FAFAED920D9053B001A4621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFAED820D9053B001A4621 /* ViewController.swift */; };
 		6FAFAEDC20D9053B001A4621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFAEDA20D9053B001A4621 /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		6FAFAEE420D9053D001A4621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFAEE220D9053D001A4621 /* LaunchScreen.storyboard */; };
 		6FAFAEEE20D90629001A4621 /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFAEED20D90629001A4621 /* Registro.swift */; };
 		6FAFAEF020D906FF001A4621 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFAEEF20D906FF001A4621 /* DataHolder.swift */; };
-		6FAFAEF220D90750001A4621 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFAEF120D90750001A4621 /* GoogleService-Info.plist */; };
 		DA5CB1FE2BCF6EFE21D9A4B6 /* Pods_Examenv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A4768FC94B10B1437A43C4 /* Pods_Examenv2.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +28,7 @@
 		6F2DABD920D90EF2003A77BF /* Tablak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tablak.swift; sourceTree = "<group>"; };
 		6F2DABDD20D90F80003A77BF /* TablaControlador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaControlador.swift; sourceTree = "<group>"; };
 		6F2DABDF20D91075003A77BF /* CelulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaTableViewCell.swift; sourceTree = "<group>"; };
+		6F2DABE520D91AF6003A77BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6FAFAED320D9053B001A4621 /* Examenv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examenv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FAFAED620D9053B001A4621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FAFAED820D9053B001A4621 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		6FAFAEE520D9053D001A4621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FAFAEED20D90629001A4621 /* Registro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro.swift; sourceTree = "<group>"; };
 		6FAFAEEF20D906FF001A4621 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
-		6FAFAEF120D90750001A4621 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89A4768FC94B10B1437A43C4 /* Pods_Examenv2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Examenv2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B7D9F26AB610B2861797AE /* Pods-Examenv2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examenv2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Examenv2/Pods-Examenv2.release.xcconfig"; sourceTree = "<group>"; };
 		C1F71A1D311AF2B77DC3F6BC /* Pods-Examenv2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examenv2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Examenv2/Pods-Examenv2.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		6FAFAED520D9053B001A4621 /* Examenv2 */ = {
 			isa = PBXGroup;
 			children = (
-				6FAFAEF120D90750001A4621 /* GoogleService-Info.plist */,
+				6F2DABE520D91AF6003A77BF /* GoogleService-Info.plist */,
 				6FAFAED620D9053B001A4621 /* AppDelegate.swift */,
 				6FAFAED820D9053B001A4621 /* ViewController.swift */,
 				6FAFAEDA20D9053B001A4621 /* Main.storyboard */,
@@ -174,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FAFAEE420D9053D001A4621 /* LaunchScreen.storyboard in Resources */,
-				6FAFAEF220D90750001A4621 /* GoogleService-Info.plist in Resources */,
+				6F2DABE620D91AF6003A77BF /* GoogleService-Info.plist in Resources */,
 				6FAFAEE120D9053D001A4621 /* Assets.xcassets in Resources */,
 				6FAFAEDC20D9053B001A4621 /* Main.storyboard in Resources */,
 			);
