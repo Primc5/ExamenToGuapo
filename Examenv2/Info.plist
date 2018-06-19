@@ -34,6 +34,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>GPS Tracker</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>GPS Tracker</string>
+	<key>NSLocationUsageDescription</key>
+	<string>GPS Tracker</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>GPS Tracker</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
